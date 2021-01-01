@@ -1,0 +1,36 @@
+class Person:
+    def __init__(self,initialAge):
+        if initialAge > 0:
+            age = initialAge
+        else:
+            return 'Age is not valid, setting age to 0.'
+            age = 0
+
+
+    def amIOld(age):
+        if age < 13:
+            return 'You are young.'
+        elif 18 > age >= 13:
+            return 'You are teenager.'
+        elif age >= 18:
+            return 'You are old.'
+
+    def yearPasses(age):
+        return age + 3
+
+li=[]
+m=0
+t = int(input())
+while t > m:
+    l=int(input())
+    if l>0:
+        li.append(l)
+    else:
+        li.append(0)
+    m=m+1
+
+for d in li:
+    print('',Person(d),'')
+    print('',Person.amIOld(d),'')
+    c = Person.yearPasses(d)
+    print('',Person.amIOld(c),'')
