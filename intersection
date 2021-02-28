@@ -1,0 +1,10 @@
+n = int(input())
+k = input()
+m = int(input())
+l = input()
+li = [int(x) for x in k.split()]
+lm = [int(x) for x in l.split()]
+a = set(li)
+b = set(lm)
+c = a.difference(b)
+print(len(c))
