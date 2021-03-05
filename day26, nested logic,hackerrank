@@ -1,0 +1,27 @@
+x = input()
+y = input()
+d1, m1, y1 = (int(k) for k in x.split())
+d2,m2,y2 = (int(l) for l in y.split())
+fine=0
+if y1==y2:
+    if m1==m2:
+        if d1<=d2:
+            fine = fine +0
+            print(fine)
+        elif d1>d2:
+            fine = fine + 15*(d1-d2)
+            print(fine)
+    elif m1>m2:
+        fine=fine+ 500*(m1-m2)
+        print(fine)
+
+    else:
+        fine=fine+0
+        print(fine)
+elif y1>y2:
+    fine = fine + 10000
+    print(fine)
+
+else:
+    fine= fine + 0
+    print(fine)
